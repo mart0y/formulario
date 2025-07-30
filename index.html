@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Socio - Boca Juniors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Formulario de Socio</h1>
+        <p id="descripcion">¡Bienvenido! Completa este formulario para hacerte socio de Boca Juniors y formar parte de nuestra gran familia.</p>
+        
+        <form id="formulario-socio">
+            <div class="form-group">
+                <label for="nombre" id="nombre-etiqueta">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="correo" id="correo-etiqueta">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+
+            <div class="form-group">
+                <label for="edad" id="edad-etiqueta">Edad:</label>
+                <input type="number" id="edad" name="edad" min="18" max="100" placeholder="Ingresa tu edad" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contacto" id="contacto-etiqueta">¿Cómo prefieres que te contactemos?</label>
+                <select id="contacto" name="contacto">
+                    <option value="email">Correo Electrónico</option>
+                    <option value="telefono">Teléfono</option>
+                    <option value="ninguno">Sin Preferencia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label id="uso-etiqueta">¿Con qué frecuencia sigues los partidos de Boca Juniors?</label>
+                <div class="botones-radio">
+                    <label><input type="radio" name="idea" value="frecuentemente" />Frecuentente</label>
+                    <label><input type="radio" name="idea" value="regularmente" />Regularmente</label>
+                    <label><input type="radio" name="idea" value="a veces" />A veces</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id="caracteristicas-etiqueta">¿Qué beneficios te gustaría recibir como socio? (Selecciona todos los que apliquen)</label>
+                <div class="grupo-checkbox">
+                    <label><input type="checkbox" name="elementos" value="descuentos" />Descuentos en la tienda oficial</label>
+                    <label><input type="checkbox" name="elementos" value="acceso" />Acceso exclusivo a eventos</label>
+                    <label><input type="checkbox" name="elementos" value="entradas" />Entradas garantizadas</label>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios" id="comentarios-etiqueta">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="¿Tienes alguna sugerencia o pregunta?"></textarea>
+            </div>
+
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
